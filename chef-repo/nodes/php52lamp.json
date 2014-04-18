@@ -1,0 +1,9 @@
+{
+  "run_list":[
+     "recipe[yum]",
+     "recipe[yum-repoforge]",
+     "recipe[yum-ius]",
+     "role[database]", 
+     "role[webserver]"
+   ]
+}

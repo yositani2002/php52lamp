@@ -1,0 +1,10 @@
+site :opscode
+cookbook 'sudo'
+cookbook 'yum-repoforge'
+cookbook 'yum-ius'
+cookbook 'postgresql'
+cookbook 'apache2'
+cookbook 'git'
+cookbook 'vim'
+cookbook 'python'
+
