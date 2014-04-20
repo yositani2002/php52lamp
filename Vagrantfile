@@ -115,6 +115,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
-  config.vm.network "private_network", ip: "192.168.33.12"
+  config.vm.network "private_network", ip: "192.168.33.13"
   config.vm.hostname = "php52lamp"
+  config.vm.provision :shell, :path => "provision.sh"
 end
