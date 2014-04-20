@@ -23,6 +23,12 @@ cd php-5.2.17
 --enable-zip --with-mysqli --enable-sockets
 make
 make install
+## Set php.ini
+cp php.ini-recommended /etc/php.ini
+## APC
+printf "\n" | /usr/local/bin/pecl install apc
+sed -i 's#extension_dir = "./"#extension_dir = "/usr/local/lib/php/extensions/no-debug-non-zts-20060613/"#' /etc/php.ini
+echo "extension=apc.so" >> /etc/php.ini
 cd ..
 yum install -y mysql mysql-server
 /etc/init.d/mysqld start
