@@ -31,4 +31,17 @@ vagrantファイルでipを固定で割り振っています。
 
     $ vagrant up
 
+SSHのホスト名設定
+
+    $ vagrant ssh-config --host php52lamp >> ~/.ssh/config
+
 provision.shはPHP5.2.17をソースインストールします。
+
+apache benchの実行
+------------------
+
+document rootは/vagrant/abtest/webとなっております。
+
+    $ ssh php52lamp
+    (php52lamp) $ ab -n 1000 -c 100 http://localhost/soap.php
+    
