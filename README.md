@@ -1,9 +1,12 @@
 php52lamp
 =========
 
-[vagrant + provision.sh]Apache2.2,PHP5.2,MySQL
-
 apache benchでベンチマークをとるために作成しました。
+
+vagrant と provision.shファイルでLAMP構成を自動構築します。
+Apache2.2,PHP5.2,MySQL
+
+PHPはソースインストールとなっています。
 
 基本的にCentOS6.5を前提としています。:
 
